@@ -116,20 +116,23 @@
 			</table>
 		</div>
 		<div class="row">
-			<div th:if="${persons.getTotalPages() != 0}" class="form-group col-md-11 pagination-centered">
-				<ul class="pagination">
-					<!-- <li th:class="${persons.getNumber() == 0} ? disabled"><a class="pageLink" th:href="@{/persons(pageSize=${selectedPageSize}, page=1)}">&laquo;</a></li> -->
-					<li th:class="${persons.getNumber() == 0} ? disabled"><a class="pageLink" th:href="@{/persons(pageSize=${selectedPageSize}, page=${persons.getNumber()}, content=${greeting.content})}">&larr;</a></li>
-					<li th:class="${persons.getNumber() == (page - 1)} ? 'active pointer-disabled'"
-						th:each="page : ${#numbers.sequence(pager.getStartPage(), pager.getEndPage())}"><a class="pageLink" th:href="@{/persons(pageSize=${selectedPageSize}, page=${page}, content=${greeting.content}, keywordOption=${greeting.keywordOption})}" th:text="${page}"></a></li>
-					<li th:class="${persons.getNumber() + 1 == persons.getTotalPages()} ? disabled"><a class="pageLink" th:href="@{/persons(pageSize=${selectedPageSize}, page=${persons.getNumber() + 2}, content=${greeting.content}, keywordOption=${greeting.keywordOption})}">&rarr;</a></li>
-					<!-- <li th:class="${persons.getNumber() + 1 == persons.getTotalPages()} ? disabled"><a class="pageLink" th:href="@{/persons(pageSize=${selectedPageSize},page=${persons.getTotalPages()})}">&raquo;</a></li> -->
-				</ul>
-			</div>
-            <div th:unless="${persons.getTotalPages() != 0}" class="form-group col-md-11 pagination-centered">
-             No results found
+
+            <div th:if="${persons.getTotalPages() != 0}" class="form-group col-md-11 pagination-centered">
+                <ul class="pagination">
+                    <!-- <li th:class="${persons.getNumber() == 0} ? disabled"><a class="pageLink" th:href="@{/multipleitems(pageSize=${selectedPageSize}, page=1)}">&laquo;</a></li> -->
+                    <li th:class="${persons.getNumber() == 0} ? disabled"><a class="pageLink" th:href="@{/multipleitems(pageSize=${selectedPageSize}, page=${persons.getNumber()}, title=${title}, fullName=${fullName}, alias=${alias}, nations=${nations}, cities=${cities}, states=${states}, titleOption=${titleOption}, fullNameOption=${fullNameOption}, aliasOption=${aliasOption}, cityOption=${citiesOption}, stateOption=${statesOption}, nationOption=${nationsOption})}">&larr;</a></li>
+                    <li th:class="${persons.getNumber() == (page - 1)} ? 'active pointer-disabled'"
+                        th:each="page : ${#numbers.sequence(pager.getStartPage(), pager.getEndPage())}"><a class="pageLink" th:href="@{/multipleitems(pageSize=${selectedPageSize}, page=${page}, title=${title}, fullName=${fullName}, alias=${alias}, nations=${nations}, cities=${cities}, states=${states}, titleOption=${titleOption}, fullNameOption=${fullNameOption}, aliasOption=${aliasOption}, cityOption=${citiesOption}, stateOption=${statesOption}, nationOption=${nationsOption})}" th:text="${page}"></a></li>
+                    <li th:class="${persons.getNumber() + 1 == persons.getTotalPages()} ? disabled"><a class="pageLink" th:href="@{/multipleitems(pageSize=${selectedPageSize}, page=${persons.getNumber() + 2}, title=${title}, fullName=${fullName}, alias=${alias}, nations=${nations}, cities=${cities}, states=${states}, titleOption=${titleOption}, fullNameOption=${fullNameOption}, aliasOption=${aliasOption}, cityOption=${citiesOption}, stateOption=${statesOption}, nationOption=${nationsOption} )}">&rarr;</a></li>
+                    <!--<li th:class="${persons.getNumber() + 1 == persons.getTotalPages()} ? disabled"><a class="pageLink" th:href="@{/multipleitems(pageSize=${selectedPageSize},page=${persons.getTotalPages()})}">&raquo;</a></li> -->
+                </ul>
             </div>
-		</div>
+
+            <div th:unless="${persons.getTotalPages() != 0}" class="form-group col-md-11 pagination-centered">
+                No results found
+            </div>
+
+        </div>
 		<footer class="navbar-fixed-bottom">
         	<p>&copy;2016 Yale University Beinecke Rare Book and Manuscript Library. All rights reserved.</p>
     	</footer>

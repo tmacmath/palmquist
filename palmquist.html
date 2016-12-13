@@ -41,7 +41,6 @@
     <link type="text/css" rel="stylesheet"
           href="http://beinecke.library.yale.edu/sites/default/files/css/css_dsF10iae9YCChkGKcdcVhSnId6N3WlbbuEE0p_3HyP4.css"
           media="all"/>
-    <link th:href="@{/css/palmquist-theme.css}" rel="stylesheet" />  
 
     <!--[if (lt IE 9)&(!IEMobile)]>
     <link type="text/css" rel="stylesheet"
@@ -173,12 +172,12 @@
                                                     <option value="more">More...</option>
                                                 </select>
 
-                                                <input type="hidden" name="searchArg" id="search_hidden" value=""/>
+                                                <input type="hidden" name="searchArg" id="search_hidden" value="">
                                                 <input type="hidden" name="searchCode" id="searchCode" value="GKEY^*"/>
                                                 <input type="hidden" name="searchType" id="searchType" value="0"/>
                                                 <input type="hidden" name="recCount" id="recCount" value="50"/>
                                                 <input type="submit" value="Search" id="search_form_btn"
-                                                       name="search_form_btn"/>
+                                                       name="search_form_btn">
                                                 <div id="search_chrome_work_around" style="display: none">
                                                     <input type="text" name="search_status" id="search_status"
                                                            value="default"/>
@@ -224,14 +223,20 @@
                                             <div class="field field-name-field-signature-media field-type-file field-label-hidden">
                                                 <div class="field-items">
                                                     <div class="field-item even">
-                                                        <div id="file-608" class="file file-image file-image-jpeg">
+                                                        <div id="file-608" class="file file-image file-image-jpeg"
+                                                             class="file file-image file-image-jpeg">
 
                                                             <div class="content">
+                                                                <img typeof="foaf:Image"
+                                                                     src="http://beinecke.library.yale.edu/sites/default/files/styles/node_banner/public/1048460_quarter.jpg?itok=U7dBi_ld"
+                                                                     width="640" height="426" alt="" title=""/>
                                                                 <div class="field field-name-field-caption0 field-type-text-long field-label-hidden">
                                                                     <div class="field-items">
-                                                                        <div class="field-item even">
-                                                                            <h2 style="margin-bottom: 0.2em; font-size: 1.5em; font: inherit; font-weight: normal; line-height: 1.3em; font-family: Georgia; color: rgb(52, 68, 97); -webkit-text-size-adjust: none;">
-                                                                                <a href="http://hdl.handle.net/10079/fa/beinecke.wipa">[Read more about this collection]</a></h2></div>
+                                                                        <div class="field-item even"><p> </p>
+                                                                            <h2 style="margin-top: 1.07em; margin-bottom: 0.2em; font-size: 1.5em; font: inherit; font-weight: normal; line-height: 1.3em; font-family: Georgia; color: rgb(52, 68, 97); -webkit-text-size-adjust: none;">
+                                                                                <a href="http://brbl-dl.library.yale.edu/vufind/Record/3523666">[Photograph
+                                                                                    of two unidentified men outside of
+                                                                                    the Beinecke]</a></h2></div>
                                                                     </div>
                                                                 </div>
                                                             </div><!-- end content -->
@@ -244,36 +249,44 @@
                                             <div class="field field-name-body field-type-text-with-summary field-label-hidden">
                                                 <div class="field-items">
                                                     <div class="field-item even" property="content:encoded">
-                                                        <h2>Quick Search</h2>
-                                                        <p> (Searches the title, full name, and A.K.A. Description fields) </p>
-
-                                                        <form action="#" th:action="@{/persons}" th:object="${greeting}" method="get">
-                                                            <select class="ui-accordion">
-                                                                <option value="Search with">Search with</option>
-                                                                <option value="ALL of these keywords">ALL of these keywords</option>
-                                                                <option value="ANY of these keywords">ANY of these keywords</option>
-                                                                <option value="This entire phrase">This entire phrase</option>
-                                                            </select> 
-                                                            <!-- <p>Id: <input type="text" th:field="*{id}" /></p> -->
-                                                            <p><input class="palmSearch" type="text" th:field="*{content}" /></p>
-                                                            <p><input type="submit" value="Submit" /> </p>
-                                                        </form>
-                                                    </div><!-- field-item even -->
-                                                    <div class="field-item even" property="content:encoded">
-                                                        <h2>Advanced Search</h2>
-                                                        <p>Enter terms in any of the fields below.</p>
-
-                                                        <form action="#" th:action="@{/singleitem}" th:object="${person}" method="get">
-                                                            <!-- <p>Id: <input type="text" th:field="*{id}" /></p> -->
-                                                            <p>Title <input type="text" th:field="*{title}" /></p>
-                                                            <p>Full Name <input type="text" th:field="*{lastname}" /></p>
-                                                            <p>Also Known As <input type="text" th:field="*{alias}" /></p>
-                                                            <p>Nations <input type="text" th:field="*{nations}" /></p>
-                                                            <p>States <input type="text" th:field="*{states}" /></p>
-                                                            <p>Cities <input type="text" th:field="*{cities}" /></p>
-
-                                                            <p><input type="submit" value="Submit" /></p>
-                                                        </form>
+                                                        <p>The site was developed and designed by <a
+                                                                href="http://www.messageagency.com/">Message Agency</a>
+                                                            in partnership with <a href="http://tabulacreative.com/">Tabula
+                                                                Creative</a> and supported by the Beinecke Website
+                                                            Redesign Working Group:</p>
+                                                        <ul>
+                                                            <li>Lisa Conathan: Archivist, Technical Services</li>
+                                                            <li>Kristy Dixon: Head, Digital Projects &amp; Metadata</li>
+                                                            <li>Moira Fitzgerald: Assistant Head, Public Services</li>
+                                                            <li>Elizabeth Frengel: Research Services Librarian</li>
+                                                            <li>Raymond Frohlich: Head, Technology &amp; Digital Assets
+                                                                (chair)
+                                                            </li>
+                                                            <li>Kathryn James: Curator, Early Modern &amp; Osborn
+                                                                Collection
+                                                            </li>
+                                                            <li>Zoe Keller: Public Relations &amp; Communications
+                                                                Officer
+                                                            </li>
+                                                            <li>Meredith Miller: Senior Photographer, Techology &amp;
+                                                                Digital Assets
+                                                            </li>
+                                                            <li>Stacy Smith: Senior Administrative Assistant, Finance
+                                                                &amp; Administration
+                                                            </li>
+                                                            <li>Molly Wheeler: Archivist, Technical Services</li>
+                                                        </ul>
+                                                        <p>Thanks to <a
+                                                                href="http://resources.library.yale.edu/StaffDirectory/detail.aspx?q=414">Tobin
+                                                            Nellhaus</a>, Librarian for Performing Arts, Media &amp;
+                                                            Philosophy, for his help with transitioning collections
+                                                            highlights and exhibition content.</p>
+                                                        <p>Special thanks to the <a href="http://www.yale.edu/printer/">Office
+                                                            of the University Printer</a> for their work on the Beinecke
+                                                            50th Anniversary visual design and support throughout the
+                                                            project.</p>
+                                                        <p>If you would like to provide us with feedback about the site,
+                                                            you can leave us a comment <a href="/feedback">here</a>.</p>
                                                     </div><!-- field-item even -->
                                                 </div><!-- field-items -->
                                             </div>
@@ -311,8 +324,8 @@
                                         type="text/javascript" defer="defer"></script><!-- End: www.iperceptions.com -->
                             </div><!-- content clearfix -->
                         </div><!-- block-inner clearfix -->
-                    </div><!-- block block-block block-6 block-block-6 odd block-without-title -->
-        </div><!-- "region-inner region-footer-first-inner -->
+                    </div><!-- block block-block block-6 block-block-6 odd block-without-title -- >
+        </div><!-- class="region-inner region-footer-first-inner -->
                 </div><!-- grid-12 region region-footer-first -->
 
                 <div class="grid-12 region region-footer-second" id="region-footer-second">
@@ -336,13 +349,16 @@
                                         </ul>
                                     </div>
                                     <!-- menu-block-wrapper menu-block-3 menu-name-menu-footer-menu parent-mlid-0 menu-level-1-->
-                                </div><!-- content clearfix -->
-                             </div><!-- block-inner clearfix -->
+                                </div><!-- content clearfix -- >
+            </div><!-- block-inner clearfix -->
                             </div><!-- block block-menu-block block-3 block-menu-block-3 odd block-without-title -->
                         </div><!-- region-inner region-footer-second-inner -->
                     </div><!-- grid-12 region region-footer-second -->
                 </div><!--zone-footer-->
-            </div><!--zone-footer-wrapper-->         
+            </div><!--zone-footer-wrapper-->
+
+            </div>
+        </div>
     </footer>
 </body>
 </html>
